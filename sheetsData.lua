@@ -40,7 +40,7 @@ local c_sheet = graphics.newImageSheet( "IMG/gameScene/run_001.png", c_options )
     {name = "normal", sheet = baseSheet, frames = {45, 46, 47, 46, 45, 48}, time = 500, loopCount = 0}
   };
 
-  return {csheet = c_sheet, sheet = baseSheet, characterAnim = characterAnimations, coinsAnim = coinsAnimations, purpleEnemyAnim = purpleEnemyAnimations, blueEnemyAnim = blueEnemyAnimations, yellowEnemyAnim = yellowEnemyAnimations};
+  return {characterSheet = c_sheet, sheet = baseSheet, characterAnim = characterAnimations, coinsAnim = coinsAnimations, purpleEnemyAnim = purpleEnemyAnimations, blueEnemyAnim = blueEnemyAnimations, yellowEnemyAnim = yellowEnemyAnimations};
 end
 
 return sheetsData;

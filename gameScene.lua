@@ -28,7 +28,7 @@ local loseSFX;
 local sheetsData = require "sheetsData";
 --here we hold informations about the character 
 local gameSheet;
-local csheet;
+local characterSheet;
 local characterAnimations, coinsAnimations, purpleEnemyAnimations, blueEnemyAnimations, yellowEnemyAnimations;
 
 --here we load our information about predefined spawns for platform
@@ -582,7 +582,7 @@ createCoins = function(group)
 end
 
 createCharacter = function(group)
-  character = display.newSprite(gameLayer, c_sheet, characterAnimations);
+  character = display.newSprite(gameLayer, characterSheet, characterAnimations);
   character.x, character.y = 200, 140;
   physics.addBody(character, {bounce = 0, density = 1, friction = 0, filter = {categoryBits = charCatBit, maskBits = charMaskBit}});
   character:setLinearVelocity(gameSpeed, 0);
@@ -812,7 +812,7 @@ function scene:createScene( event )
   
   local sheetsAnimData = sheetsData.loadGameSheetsData();
   gameSheet = sheetsAnimData.sheet;
-  charSheet = sheetsAnimData.c_sheet;
+  characterSheet = sheetsAnimData.characterSheet; 
   characterAnimations = sheetsAnimData.characterAnim;
   coinsAnimations = sheetsAnimData.coinsAnim;
   purpleEnemyAnimations = sheetsAnimData.purpleEnemyAnim;
