@@ -27,8 +27,8 @@ local loseSFX;
 --this loads our sheetsData table
 local sheetsData = require "sheetsData";
 --here we hold informations about the character 
-local gameSheet;
-local characterSheet;
+local gameSheet, characterSheet;
+--local characterSheet;
 local characterAnimations, coinsAnimations, purpleEnemyAnimations, blueEnemyAnimations, yellowEnemyAnimations;
 
 --here we load our information about predefined spawns for platform
